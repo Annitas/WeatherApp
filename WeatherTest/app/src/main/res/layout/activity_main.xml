@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/gradient_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/text_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="60sp"/>
+
+    <EditText
+        android:id="@+id/citySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="40sp"
+        android:backgroundTint="@color/teal_700"
+        android:ems="10"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_below="@id/citySearch"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="80sp"
+        android:backgroundTint="@color/hint"
+        android:text="@string/button_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/weatherResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSearch"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="20sp"
+        android:fontFamily="sans-serif-thin"
+
+        android:textAlignment="center"
+        android:textColor="@color/resultW"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/humidityResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherResult"
+        android:layout_marginTop="27sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textAlignment="center"
+        android:textColor="@color/resultW"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/reload"
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:layout_alignRight="@id/logo"
+        android:layout_marginTop="5sp"
+
+        android:textAlignment="center" />
+
+</RelativeLayout>
