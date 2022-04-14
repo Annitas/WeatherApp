@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.os.Bundle;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +27,8 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
     private EditText citySearch;
-    private Button buttonSearch, reload;
+    private Button buttonSearch;
+    ImageButton reload;
     private TextView weatherResult, humidityResult;
     SharedPreferences sPref;
 
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSearch = findViewById(R.id.buttonSearch); //search button
         weatherResult = findViewById(R.id.weatherResult); //result text
         humidityResult = findViewById(R.id.humidityResult); //result humidity
-        reload = findViewById(R.id.reload);
+        reload = findViewById(R.id.reload); //hui
 
 
         buttonSearch.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
                 while((line = read.readLine()) != null) {
                     buff.append(line).append("\n");  //line +"\n"
                 }
-
                 return buff.toString();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
