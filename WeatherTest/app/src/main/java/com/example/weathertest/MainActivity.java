@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText citySearch;
     private Button buttonSearch;
     ImageButton reload;
-    private TextView weatherResult, humidityResult;
+    private TextView weatherResult, humidityResult, feelsResult;
     SharedPreferences sPref;
 
     final String SAVED_TEXT = "saved_text";
@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         buttonSearch = findViewById(R.id.buttonSearch); //search button
         weatherResult = findViewById(R.id.weatherResult); //result text
         humidityResult = findViewById(R.id.humidityResult); //result humidity
-        reload = findViewById(R.id.reload); //hui
+        reload = findViewById(R.id.reload); //reload
+        feelsResult = findViewById(R.id.feelsResult);
 
 
         buttonSearch.setOnClickListener(new View.OnClickListener() {
@@ -154,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject object = new JSONObject(result);
                 weatherResult.setText(object.getJSONObject("main").getInt("temp") + "°C");
                 humidityResult.setText("Humidity: " + object.getJSONObject("main").getInt("humidity"));
+                feelsResult.setText("Feels like: " + object.getJSONObject("main").getInt("feels_like") + "°C");
                 //set text to field with result"
             } catch (JSONException e) {
                 e.printStackTrace();

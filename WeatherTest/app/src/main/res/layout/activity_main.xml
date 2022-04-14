@@ -50,13 +50,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonSearch"
-        android:layout_marginTop="20sp"
         android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="20sp"
         android:fontFamily="sans-serif-thin"
 
         android:textAlignment="center"
         android:textColor="@color/resultW"
         android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/feelsResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weatherResult"
+        android:layout_marginTop="8sp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textAlignment="center"
+        android:textColor="@color/resultW"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/humidityResult"
